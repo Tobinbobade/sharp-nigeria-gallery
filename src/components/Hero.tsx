@@ -1,4 +1,5 @@
 import heroImage from "@/assets/hero-image.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -19,13 +20,13 @@ const Hero = () => {
         <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-primary-foreground/90 animate-fade-in" style={{ animationDelay: "0.2s" }}>
           Professional photography services across Nigeria. Specializing in weddings, events, portraits, and corporate photography.
         </p>
-        <button
-          onClick={() => document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })}
-          className="bg-accent text-accent-foreground px-8 py-3 rounded-sm font-medium hover:opacity-90 transition-opacity animate-fade-in"
+        <Link
+          to="/portfolio"
+          className="inline-block bg-accent text-accent-foreground px-8 py-3 rounded-sm font-medium hover:opacity-90 transition-opacity animate-fade-in"
           style={{ animationDelay: "0.4s" }}
         >
           View Portfolio
-        </button>
+        </Link>
       </div>
     </section>
   );
